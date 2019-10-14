@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+    int a[25];
+    int i,j,n,k;
+    printf("Enter the number of elements in the array.\n");
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        printf("Enter the %d element:\n",i+1);
+        scanf("%d",&a[i]);
+    }
+    printf("The array before sorting is:\n");
+    for(i=0;i<n;i++)
+    {
+       printf("%d\t",a[i]);
+    }
+    printf("\n");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<i;j++)
+        {
+          if(a[i]>a[j])
+          {
+            k = a[j];
+            a[j] = a[i];
+            a[i] = k;
+          }
+        }
+    }
+    printf("The array after sorting is:\n");
+    for(i=0;i<n;i++)
+    {
+       printf("%d\t",a[i]);
+    }
+    printf("\n");
+}
